@@ -1,0 +1,17 @@
+<h1>What is the longest word you can find?</h1>
+
+<p>
+<% @letters.each do |letter| %>
+<div class="btn btn-info"><%= letter %></div>
+<% end %>
+</p>
+
+<form action="/score" method="POST" class="form-inline">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+  <input type="text" name="word" class="form-control">
+  <input type="submit" value="Play" class="form-control btn-success">
+</form>
+<p><strong>Score</strong>: <%= cookies[:score].nil? ? 0 : cookies[:score] %></p>
+<br>
+<a href="" class="btn btn-danger">refresh letters</a>

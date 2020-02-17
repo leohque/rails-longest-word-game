@@ -1,0 +1,15 @@
+<h1>Result</h1>
+<p>
+<% if @word_in_grid && @word_is_real %>
+  <%= "Congratulations! #{params[:word].upcase} is a valid English word!" %>
+<% elsif @word_in_grid == false %>
+  <%= "Sorry, but #{params[:word].upcase} can't be built out of #{params[:letters]}" %>
+<% else %>
+  <%= "Sorry, but #{params[:word].upcase} is not a real word." %>
+<% end %>
+</p>
+
+
+<p><strong>Score</strong>: <%= cookies[:score] %></p>
+
+<%= link_to "Play again", new_path %>
