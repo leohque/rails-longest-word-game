@@ -1,5 +1,19 @@
 {
   "name": "rails-longest-word-game",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1",
+    "select2": "^4.0.13"
+  },
+  "version": "0.5",
+  "description": "find the longest word",
+  "main": "application.js",
+  "repository": "git@github.com:leohque/rails-longest-word-game.git",
+  "author": "leo martinez <leohque@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.41.6"
+  }
 }
