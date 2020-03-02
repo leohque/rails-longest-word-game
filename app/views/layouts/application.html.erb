@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsLongestWordGame</title>
+    <title>Longest Word game</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -13,11 +11,7 @@
     <div class="container text-center my-4">
       <%= yield %>
     </div>
-
-  <%= javascript_include_tag 'application' %>
-
-  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
-
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
-
 </html>
