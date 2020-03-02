@@ -1,6 +1,6 @@
-<h1>What is the longest word you can find?</h1>
+<h1 class="m-1">What is the longest word you can find?</h1>
 
-  <div id="simpleList" class="d-flex justify-content-center">
+  <div id="simpleList" class="d-flex justify-content-center flex-wrap">
     <% @letters.each do |letter| %>
       <div id="<%= letter %>" class="btn btn-info letter m-1 shadow" data-letter="<%= letter %>">
         <%= letter %>
@@ -15,6 +15,5 @@
   <input type="submit" value="Play" class="form-control btn-success">
 </form>
 </div>
-<p><strong>Score</strong>: <%= cookies[:score].nil? ? 0 : cookies[:score] %></p>
-<br>
+<p class="result"><strong>Score</strong>: <%= cookies[:score].nil? ? 0 : cookies[:score] %></p>
 <a href="" class="btn btn-danger shadow">refresh letters</a>
