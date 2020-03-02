@@ -1,11 +1,17 @@
 <h1>Result</h1>
 <p class="result">
 <% if @word_in_grid && @word_is_real %>
-  <%= "Nice. #{params[:word].upcase} got you some points." %>
+  Nice! The word <strong><%= params[:word].upcase %></strong> got you some points.
+  <br>
+  <%= image_tag 'yay.gif' %>
 <% elsif @word_in_grid == false %>
-  <%= "Sorry, but #{params[:word].upcase} can't be built out of #{params[:letters]}" %>
+  Sorry, but <strong><%= params[:word].upcase %></strong> can't be built out of <strong><%= params[:letters] %></strong>
+  <br>
+  <%= image_tag 'moira.gif' %>
 <% else %>
-  <%= "That's not a word." %>
+  Uhh...<br>
+  <%= image_tag 'uhh.gif' %><br>
+  Try again.
 <% end %>
 </p>
 
